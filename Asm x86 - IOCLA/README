@@ -1,0 +1,20 @@
+README:
+
+  In section. data am initializat doi vectori, rev_nums si rev_base,
+in care vom pun vectorii nums_array si base_array inversati. 
+  Prin rev_nums_push punem elementele, unul cate unul, din nums_array
+pe stiva, apoi prin rev_nums_pop le scoatem pe rand si le introducem in rev_nums.	
+  Analog rev_base_push.	
+  In next_number atribuim ultimului element din rev_nums registrului 
+eax (pentru ca urmeaza sa fie deimpartitul in urmatoarele operatii).
+  In impartiri verificam in primul rand daca baza curenta e valida, altfel intram 
+in functia baza_incorecta. Impartim baza curenta la eax, punem restul pe stiva,
+incrementam un contor(contor mic) ebx care ne va folosi la afisarea numarului transformat
+si punem restul pe stiva. Cand catul ajunge la 0, ne oprim. Altfel, repetam 
+procesul, catul se salveaza in eax.
+   Pentru printare vom lua resturile de pe stiva. Dar, ca sa stim de cate ori
+dam pop, folosim contorul din ebx pe care il stocam temporar pe eax. Comparam 
+ce am scos din stiva cu 9 (daca are cod ascii mai mare, intram in functia
+print_char, care printeaza litera corespunzatoare). Mutam inapoi eax, in ecx, il 
+decrementam si comparam cu 0 sa vedem daca am terminat vectorul.
+   

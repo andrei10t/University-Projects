@@ -1,0 +1,23 @@
+			README Tema 1 PP
+	
+	Am implementat baza de date ca pe o lista de tabele. O tabela 
+este o pereche intre corpul tabelei si nume, iar corpul tabelei este 
+lista cu linii, unde prima linie e headerul.
+	Cerinta 1
+	Pentru definirea elementelor de control, am folosit instructiuni
+de selectare a elementelor din liste si perechi(car/cdr sau derivate 
+caar), cum ar fi pentru get-name, get-table, get-columns. Pentru
+add-table a fost nevoie sa concatenez liste (folosind append)
+pentru a forma corpuri de tabele, iar pentru remove-table am folosit
+recursivitate; apelam functia pana gaseam tabela pe care vreau s-o
+elimin, apoi continui sa reapelez functia remove, dand ca nou parametru
+baza de date ignorand tabela ce trebuia eliminata.
+	Cerinta 2
+	Pentru inserare am definit doua functii noi, insert-acumulator 
+si insertion. Insert-acumulator foloseste recursivitate, se reapeleaza
+pana gaseste tabela dorita, apoi apeleaza insertion care adauga coloanele,
+folosind indexul la care trebuie sa adauge. Insertion foloseste map.
+	Cerinta 3
+	Simple-select apeleaza simple-select-helper, care lucreaza tot cu
+pozitiile din lista(index-of).
+
