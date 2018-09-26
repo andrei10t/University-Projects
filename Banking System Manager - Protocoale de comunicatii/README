@@ -1,0 +1,34 @@
+		
+					README
+		
+		Am folosit scheletul de cod din laboratorul de multiplexare.
+		In CLIENT astept citirea de la tastatura, impart pe 3 cuvinte cu sscanf,
+primul cuvant fiind comanda. Dupa am o structura if else in care testez ce
+comanda e. Am folosit strncmp in loc de strcmp pentru ca aveam niste erori
+initial cu terminatorul de sir. Printez tot ce primesc.
+	Login: Daca nu esti logat si primesti de la server un mesaj cu Welcome,
+activez flagul de logare. Daca esti logat deja, returnez eroare.
+	Logout: verific daca sunt logat, trimit si primesc mesaj. 
+	Listsold: verific daca sunt logat, trimit, primesc mesaj, il convertesc din
+double in string(pot primi doar un soldul, nimic altceva).
+	Transfer: verific daca sunt logat, trimit, primesc mesaj. Verific daca e ok,
+daca da trimit si primesc raspuns. 
+	Quit:nu prea mult de spus. Daca comanda e quit, inchid.
+		In SERVER am functia eroare_tema care trimite erori; structura Client care
+are atributele unui client citite din fisier(nume, prenume,...); un vector de clienti,
+un vector de integer in care retin ce clienti sunt logati, un vector de integer in
+care retin de cate ori a gresit pinul fiecare client, si un vector de stringuri in
+care retin numarul cardului unui client care vine de pe un socket i. Am incercat sa fac 
+quit server(linia 144), ar fi trebuit sa mearga. Citesc buffer-ul cand primesc ceva si 
+impart in cuvinte: token, tok1, tok2. 
+	Login: am un flag pentru numarul cardului, daca il gasesc sau nu. Compar numarul cardului
+cu nr cardului fiecarui client, verific daca cumva e deja logat, verific daca nu are cardul
+blocat, daca a bagat si pinul corect ii dau Welcome si il trec logat. Daca greseste pinul il
+cresc in vectorul meu de erori.
+	Logout: ii trimtit mesaj de deconectare, dupa ii resetez esecurile de logare si logarea, 
+dupa ce am gasit in vectorul meu de client_client.
+	Listsold: trimit mesaj cu soldul, dupa ce l-am gasit si dupa ce l-am transformat in string.
+	Transfer: am un flag pentru gasirea persoanei careia vreau sa-i trimit bani. Daca il gasesc
+activez flagul, transform in double, verific daca am suficient, il intreb daca e sigur, verific
+daca a raspuns afirmativ, fac calculele necesare in vectorul clienti.
+		

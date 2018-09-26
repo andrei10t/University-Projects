@@ -1,0 +1,9 @@
+int main: apelam functia meniu() intr-un while infinit. Se iese din while doar daca nu s-au dau argumente, nu se poate deschide un fisier sau s-a selectat Quit in meniu.
+
+meniu: luam fisierele pe rand, verificam daca le putem deschide, daca se deschid citim o linie si caracterele de pe acea linie le verificam si salvam. apoi stergem liniile care nu au caractere printabile. flag-ul retine optiunea meniului la care ne-am oprit inainte de enter. se apeleaza print_menu, si in functie de alegere, newgame, resume sau quit. de asemenea, se alege random o linie si se transmite prin valoare lui new_game.
+
+print_menu: rol in construirea meniului si a efectului de selectie(highlight)
+
+new_game: in vizibil avem numai caractere _. mai intai afisam primele si ultimele caractere ale cuvintelor, dupa verificam cazurile daca sunt cuvinte din una sau doua caractere si punem _ la loc unde este cazul. prin functia sel primim un caracter(de la tastatura de catre user sau generat automat la 7 secunde), actualizam ceasul si verificam daca caracterul s-a mai introdus sau e deja vizibil si daca e corect(prin flag_r si flag_c). am castigat cand am aflat toate caracterele care trebuiau ghicite( numarul de _). am pierdut cand am gresit 6 caractere. NU se da enter dupa introducerea unui caracter.
+Prin Q ne intoarcem la meniu.
+Jocul prezinta un omulet-robot amuzant si o culoare de fundal.

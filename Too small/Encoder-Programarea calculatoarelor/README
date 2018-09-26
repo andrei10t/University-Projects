@@ -1,0 +1,19 @@
+encoder.c:
+t=linia citita
+mesaj=output-ul codificarii
+
+in functia main apelam citirea.
+
+in functia citire:
+-citim linia t, verificam daca este numar(pozitiv si apoi negativ). daca nu, verificam daca termenul este singur pe linie(caz in care este caracter). daca nu este nici numar, nici caracter, este cuvant;
+-la fiecare determinare a tipului sau crestem variabilele care retin numarul fiecarui tip(nu,ca,cu) si apelam functia de codificare specifica fiecaruia;
+-dupa ce s-a codificat termenul primit, se eliberea memoria alocata lui si se citeste alt termen.
+
+in functia codcar codificam caracterele. se determina care e cel mai comun caracter si cel mai putin comun prin parcurgerea mesajului, caracter cu caracter, si cresterea in doi vectori a numarului de aparitii pentru fiecare cod ASCII intalnit.
+
+in functia codnumn codificam numerele negative. la fel ca si in cazul numerelor pozitive(codificare prin codnump), determinam un minim/maxim initial, apoi generam o ciclare a numarului si comparam. numarul de ciclari e stiut(prin numarul de cifre).
+
+in functia codcuv codificam cuvinte. termenul e rupt in cele doua bucati, iar bucatile prelucrate.
+
+
+
